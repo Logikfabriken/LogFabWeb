@@ -1,0 +1,39 @@
+﻿nav {
+    padding: 20px 0;
+    height: 100px;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.intro h1.header {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 75px;
+}
+
+.intro h5.header {
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.parallax-container {
+    height: 600px;
+}
+
+    .parallax-container .valign {
+        margin-top: 200px !important;
+    }
+
+.text-shadow {
+    text-shadow: 3px 3px #808080;
+}
+
+.instagram-media
+{
+    margin: 0 auto;
+}
