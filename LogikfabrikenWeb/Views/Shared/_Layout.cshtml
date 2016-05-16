@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logikfabriken</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="content/materialize/css/materialize.min.css" rel="stylesheet" />
+    <link href="content/css/logikfabriken.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="pink darken-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#start" class="brand-logo">Logikfabriken</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#vad-vill-vi">Vad vill vi?</a></li>
+                    <li><a href="#vilka-ar-vi">Vilka är?</a></li>
+                    <li><a href="#bli-en-av-oss">Bli en av oss!</a></li>
+                    <li><a href="#vad-hander">Vad händer?</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#">Vad vill vi?</a></li>
+                    <li><a href="#">Vilka är?</a></li>
+                    <li><a href="#">Bli en av oss!</a></li>
+                    <li><a href="#">Vad händer?</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+    </div>
+
+    @RenderBody()
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Logikfabriken AB</h5>
+                    <p class="grey-text text-lighten-4">Packhusplatsen 2, 411 13 Göteborg</p>
+                    <p class="grey-text text-lighten-4">Telefon: +46 00 000 00 00</p>
+                    <p class="grey-text text-lighten-4"> E-post info@logikfabriken.se</p>
+                </div>
+                <div class="col l3 s12 pin-bottom">
+                    <a href="#"><img src="content/img/logos/In-2C-48px-R.png" /></a>
+                    <a href="#"><img src="content/img/logos/Instagram_App_Large_May2016.png" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright <a class="white-text text-lighten-3" href="http://logikfabriken.se">Logikfabriken</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="scripts/materialize/materialize.min.js"></script>
+    <script src="scripts/init.js"></script>
+    <script src="scripts/instagram.js"></script>
+
+</body>
+</html>
