@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,7 +13,7 @@ namespace LogikfabrikenWeb.Controllers
     {
         // GET: Home
         [Route("")]
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
             return View();
         }
