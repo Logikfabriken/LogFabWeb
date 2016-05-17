@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace LogikfabrikenWeb.api.Models
+namespace LogikfabrikenWeb
 {
 
     public class Location
@@ -55,7 +56,7 @@ namespace LogikfabrikenWeb.api.Models
 
     public class Caption
     {
-        public string created_time { get; set; }
+        public int created_time { get; set; }
         public string text { get; set; }
         public From from { get; set; }
         public string id { get; set; }
@@ -95,10 +96,21 @@ namespace LogikfabrikenWeb.api.Models
         public Caption caption { get; set; }
         public string link { get; set; }
         public Likes likes { get; set; }
-        public string created_time { get; set; }
+        public int created_time { get; set; }
         public string type { get; set; }
         public string id { get; set; }
         public User user { get; set; }
+
+        [JsonIgnore]
+        public DateTime CreatedDate
+        {
+            get
+            {
+                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+                dtDateTime = dtDateTime.AddSeconds(created_time).ToLocalTime();
+                return dtDateTime;
+            }
+        }
     }
 
 

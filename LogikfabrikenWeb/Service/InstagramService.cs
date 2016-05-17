@@ -1,36 +1,27 @@
-﻿using LogikfabrikenWeb.api.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web.Http;
+using System.Web;
 
-namespace LogikfabrikenWeb.api
+namespace LogikfabrikenWeb.Service
 {
-    [RoutePrefix("api/instagram")]
-    public class InstagramController : ApiController
+    public class InstagramService
     {
-        [Route("")]
-        [HttpGet]
-        public async Task<InstagramFeed> GetFeed()
+        public static async Task<InstagramFeed> GetFeed(string user)
         {
-            var url = "https://www.instagram.com/logikfabriken/media/";
-
+            var url = String.Format("https://www.instagram.com/{0}/media/", user);
             HttpClient client = new HttpClient();
             var response = await client.GetAsync(url);
-            if(!response.IsSuccessStatusCode)
+            if (!response.IsSuccessStatusCode)
             {
                 var errorData = await response.Content.ReadAsStringAsync();
+                System.Diagnostics.Trace.TraceError(errorData);
             }
 
-
             var data = await response.Content.ReadAsAsync<InstagramFeed>();
-
             return data;
-
         }
-
     }
 }

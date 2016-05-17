@@ -1,0 +1,27 @@
+﻿@model InstagramFeed
+@{
+    var item = Model.Posts.FirstOrDefault();
+    if (item != null)
+    {
+        var age = (DateTime.Now - item.CreatedDate).Days;
+
+        <div class="card">
+            <div class="card-image">
+                <img class="instagram-image" src="@item.images.standard_resolution">
+            </div>
+            <div class="card-content">
+                <span class="card-title grey-text text-darken-4"></span>
+                <span class="instagram-text">
+                    <span class="new badge">@age @(age > 1 ? "dagar" : "dag") sedan</span>
+                    @item.caption.text
+                </span>
+                <br />
+                <br />
+                <div class="chip">
+                    <img class="instagram-user" src="@item.user.profile_picture" alt="@item.user.full_name">@item.user.full_name
+                </div>
+
+            </div>
+        </div>
+    }
+}

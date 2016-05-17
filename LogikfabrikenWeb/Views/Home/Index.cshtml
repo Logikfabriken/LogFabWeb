@@ -219,26 +219,23 @@
 
 
 <div class="container scrollspy center-align" id="vad-hander">
-    <div class="section  center-align">
-
+    <div class="section center-align">
         <h2>Vad händer?</h2>
-        <div class="card" id="instagram-container">
-            <div class="card-image">
-                <img class="instagram-image" src="">
-            </div>
-            <div class="card-content">
-                <span class="card-title grey-text text-darken-4"></span>
-                <span class="instagram-text"></span>
-                <br />
-                <br />
-                <div class="chip">
-                    <img class="instagram-user" src="" alt=""><span></span>
+        <div id="instagram-container">
+            <div class="preloader-wrapper active">
+                <div class="spinner-layer spinner-red-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
                 </div>
-
             </div>
         </div>
-
-
-
     </div>
 </div>
+@section scripts {
+<script src="~/scripts/instagram.js"></script>
+}

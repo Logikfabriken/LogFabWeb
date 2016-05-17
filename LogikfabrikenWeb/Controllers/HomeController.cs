@@ -13,9 +13,16 @@ namespace LogikfabrikenWeb.Controllers
     {
         // GET: Home
         [Route("")]
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             return View();
+        }
+
+        [Route("instagram-feed")]
+        public async Task<ActionResult> InstagramView()
+        {
+            var feed = await Service.InstagramService.GetFeed("logikfabriken");
+            return PartialView("InstagramView", feed);
         }
     }
 }
