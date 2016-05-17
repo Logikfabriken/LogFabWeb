@@ -43,6 +43,7 @@
 #instagram-container
 {
     margin: 0 auto;
+    max-width: 640px;
 }
 
 @media (min-width: 768px){
