@@ -141,13 +141,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\fonts\reckoner-webfont.svg" />
+    <Content Include="content\fonts\reckoner_bold-webfont.svg" />
+    <Content Include="content\fonts\stylesheet.css" />
+    <Content Include="content\img\backgrounds\gbg.PNG" />
+    <Content Include="content\img\backgrounds\Hertzia_-_Packhusplatsen_2_i_Göteborg.JPG" />
+    <Content Include="content\img\backgrounds\laptop-notebook-working-outside.jpg" />
+    <Content Include="content\img\backgrounds\parallax-1.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="scripts\parallax.js" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Shared\InstagramView.cshtml" />
+    <Content Include="content\fonts\reckoner-webfont.eot" />
+    <Content Include="content\fonts\reckoner-webfont.woff" />
+    <Content Include="content\fonts\reckoner-webfont.woff2" />
+    <Content Include="content\fonts\reckoner_bold-webfont.eot" />
+    <Content Include="content\fonts\reckoner_bold-webfont.woff" />
+    <Content Include="content\fonts\reckoner_bold-webfont.woff2" />
+    <Content Include="content\fonts\webfontkit-20160518-024952.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

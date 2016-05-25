@@ -1,4 +1,43 @@
-﻿nav {
+﻿@font-face {
+    font-family: 'reckoner';
+    src: url('/content/fonts/reckoner-webfont.eot');
+    src: url('/content/fonts/reckoner-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/content/fonts/reckoner-webfont.woff2') format('woff2'),
+         url('/content/fonts/reckoner-webfont.woff') format('woff'),
+         url('/content/fonts/reckoner-webfont.svg#reckonerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'reckoner_bold';
+    src: url('/content/fonts/reckoner_bold-webfont.eot');
+    src: url('/content/fonts/reckoner_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/content/fonts/reckoner_bold-webfont.woff2') format('woff2'),
+         url('/content/fonts/reckoner_bold-webfont.woff') format('woff'),
+         url('/content/fonts/reckoner_bold-webfont.svg#reckoner_boldcondensed_bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/*
+    parallax backgrounds
+*/
+#start {
+    background-image: url('/content/img/backgrounds/parallax-1.png');
+}
+
+#quote {
+    background-image: url('/content/img/backgrounds/laptop-notebook-working-outside.jpg');
+}
+
+#random {
+    background-image: url('/content/img/backgrounds/Hertzia_-_Packhusplatsen_2_i_Göteborg.JPG');
+}
+
+
+nav {
     padding: 10px 0;
     height: 80px;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9,115 +48,192 @@
 }
 
 .intro h1.header {
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 50px;
-	font-weight: 700;
-	line-height: 50px;
-	margin-bottom: 25px;
-	text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .intro h5.header {
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		font-size: 40px;
-		font-style: italic;
-		line-height: 40px;
-		margin-bottom: 25px;
-    margin-top: -100px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    line-height: 25px;
+    margin-bottom: 25px;
+    margin-top: 60px;
     position: relative;
 }
 
 
-.parallax-container {
+.parallax-box {
+    min-height: 600px;
     height: 100%;
+    background-size: auto;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-    .parallax-container .valign {
-        margin-top: 200px !important;
+    .parallax-box .section {
+        height: 100%;
+    }
+
+    .parallax-box .valign {
+        margin-top: 300px !important;
     }
 
 .text-shadow {
-    text-shadow: 3px 3px #808080;
+    text-shadow: 1px 3px 3px #808080;
 }
 
-#instagram-container
-{
+#instagram-container {
     margin: 0 auto;
     max-width: 640px;
 }
 
-@media (min-width: 768px){
-section {
-    padding: 150px 0;
-}}
 
-
-section
-{
-	padding: 100px 0;
-	width: 100%;
+.card-responsive {
+    width: 280px;
+    margin: 20px auto;
+    display: block;
 }
 
-@media (min-width: 767px){
-.full-height{
-	padding-top: 20%;
-    padding-bottom: 20%;
-    height: 100%;
-}
-.full-height-top{
-	padding-top: 5%;
-    padding-bottom: 20%;
-    height: 100%;
-}
-}
 
 nav .brand-logo {
     position: absolute;
-    color: #000;
     display: inline-block;
-    font-size: 2.1rem;
+    font-size: 42px;
     padding: 0;
     white-space: nowrap;
+    font-family: reckoner;
 }
 
 nav ul a {
-  transition: background-color .3s;
-  font-size: 1rem;
-  color: #000;
-  display: block;
-  padding: 0 15px;
-  cursor: pointer;
+    transition: background-color .3s;
+    font-size: 1rem;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
 }
 
-nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
-  margin-top: -2px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
+    nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+        margin-top: -2px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 
-nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
+    nav ul a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 
 nav ul.left {
-  float: left;
+    float: left;
 }
 
-p
-{
-	font-size: 17px;
-	line-height: 1.75;
+p {
+    font-size: 17px;
+    line-height: 1.75;
 }
 
-.text-muted
-{
-	color: #777;
+.text-muted {
+    color: #777;
 }
 
 
-section h2.section-heading
-{
-	font-size: 40px;
-	margin-bottom: 15px;
-	margin-top: 0;
+section h2.section-heading {
+    font-size: 40px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+@media (min-width: 620px) {
+    .card-responsive {
+        width: 240px;
+        margin: 10px;
+        display: inline-block;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .full-height {
+        margin-top: -30%;
+        /*padding-top: 20%;*/
+        padding-bottom: 30%;
+        height: 100%;
+    }
+
+        .full-height .container {
+            margin-top: 10%;
+            padding-top: 10%;
+        }
+
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .card-content .card-title {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 150px 0;
+    }
+
+    .card-responsive {
+        width: 30%;
+        margin: 20px;
+        display: inline-block;
+    }
+
+    .intro h5.header {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 25px;
+        margin-top: -100px;
+    }
+
+    .parallax-box {
+        background-size: cover;
+    }
+
+    nav .brand-logo {
+        font-size: 52px;
+    }
+}
+
+
+section {
+    padding: 100px 0;
+    width: 100%;
+}
+
+@media (min-width: 767px) {
+
+    .full-height {
+        padding-top: 10%;
+        padding-bottom: 20%;
+        height: 100%;
+    }
+
+        .full-height .container {
+            padding-top: 10%;
+        }
+
+    .full-height-top {
+        padding-top: 5%;
+        padding-bottom: 20%;
+        height: 100%;
+    }
+
+    .full-height .top-align {
+        padding-top: 10%;
+        margin-top: -10%;
+    }
 }
